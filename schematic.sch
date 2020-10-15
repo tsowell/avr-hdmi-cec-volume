@@ -1,0 +1,388 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:USB_B J1
+U 1 1 5F852913
+P 4150 2850
+F 0 "J1" H 4207 3317 50  0000 C CNN
+F 1 "USB_B" H 4207 3226 50  0000 C CNN
+F 2 "" H 4300 2800 50  0001 C CNN
+F 3 " ~" H 4300 2800 50  0001 C CNN
+	1    4150 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5F8534A9
+P 5100 2750
+F 0 "C2" H 5192 2796 50  0000 L CNN
+F 1 "100nF" H 5192 2705 50  0000 L CNN
+F 2 "" H 5100 2750 50  0001 C CNN
+F 3 "~" H 5100 2750 50  0001 C CNN
+	1    5100 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP_Small C1
+U 1 1 5F853985
+P 4700 2750
+F 0 "C1" H 4788 2796 50  0000 L CNN
+F 1 "1uF" H 4788 2705 50  0000 L CNN
+F 2 "" H 4700 2750 50  0001 C CNN
+F 3 "~" H 4700 2750 50  0001 C CNN
+	1    4700 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_Microchip_ATtiny:ATtiny4313-PU U2
+U 1 1 5F854C07
+P 5550 4650
+F 0 "U2" H 5550 5931 50  0000 C CNN
+F 1 "ATtiny4313-PU" H 5550 5840 50  0000 C CNN
+F 2 "Package_DIP:DIP-20_W7.62mm" H 5550 4650 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc8246.pdf" H 5550 4650 50  0001 C CNN
+	1    5550 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 2650 4700 2650
+Wire Wire Line
+	4700 3250 4700 2850
+Wire Wire Line
+	4700 2850 5100 2850
+Connection ~ 4700 2850
+Wire Wire Line
+	4450 2650 4700 2650
+Connection ~ 4700 2650
+Wire Wire Line
+	4150 3250 4700 3250
+$Comp
+L power:GND #PWR03
+U 1 1 5F859B30
+P 4150 3300
+F 0 "#PWR03" H 4150 3050 50  0001 C CNN
+F 1 "GND" H 4155 3127 50  0000 C CNN
+F 2 "" H 4150 3300 50  0001 C CNN
+F 3 "" H 4150 3300 50  0001 C CNN
+	1    4150 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 3250 4150 3300
+Connection ~ 4150 3250
+$Comp
+L power:+5V #PWR01
+U 1 1 5F85B3B9
+P 5500 2650
+F 0 "#PWR01" H 5500 2500 50  0001 C CNN
+F 1 "+5V" V 5515 2778 50  0000 L CNN
+F 2 "" H 5500 2650 50  0001 C CNN
+F 3 "" H 5500 2650 50  0001 C CNN
+	1    5500 2650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5500 2650 5100 2650
+Connection ~ 5100 2650
+$Comp
+L Device:Crystal Y1
+U 1 1 5F8601AC
+P 4400 4150
+F 0 "Y1" V 4446 4019 50  0000 R CNN
+F 1 "16.384MHz" V 4355 4019 50  0000 R CNN
+F 2 "" H 4400 4150 50  0001 C CNN
+F 3 "~" H 4400 4150 50  0001 C CNN
+	1    4400 4150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 5F8609BE
+P 4150 3950
+F 0 "C3" V 3921 3950 50  0000 C CNN
+F 1 "C_Small" V 4012 3950 50  0001 C CNN
+F 2 "" H 4150 3950 50  0001 C CNN
+F 3 "~" H 4150 3950 50  0001 C CNN
+	1    4150 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C4
+U 1 1 5F860E27
+P 4150 4350
+F 0 "C4" V 3921 4350 50  0000 C CNN
+F 1 "C_Small" V 4012 4350 50  0001 C CNN
+F 2 "" H 4150 4350 50  0001 C CNN
+F 3 "~" H 4150 4350 50  0001 C CNN
+	1    4150 4350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4400 4000 4950 4000
+Wire Wire Line
+	4950 4000 4950 4050
+Wire Wire Line
+	4400 4300 4950 4300
+Wire Wire Line
+	4950 4300 4950 4250
+Wire Wire Line
+	4400 4000 4400 3950
+Wire Wire Line
+	4400 3950 4250 3950
+Connection ~ 4400 4000
+Wire Wire Line
+	4400 4300 4400 4350
+Wire Wire Line
+	4400 4350 4250 4350
+Connection ~ 4400 4300
+Wire Wire Line
+	4050 3950 3950 3950
+Wire Wire Line
+	3950 3950 3950 4350
+Wire Wire Line
+	3950 4350 4050 4350
+$Comp
+L power:GND #PWR05
+U 1 1 5F8678F7
+P 3950 4450
+F 0 "#PWR05" H 3950 4200 50  0001 C CNN
+F 1 "GND" H 3955 4277 50  0000 C CNN
+F 2 "" H 3950 4450 50  0001 C CNN
+F 3 "" H 3950 4450 50  0001 C CNN
+	1    3950 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 4350 3950 4450
+Connection ~ 3950 4350
+$Comp
+L power:GND #PWR07
+U 1 1 5F868461
+P 5550 5850
+F 0 "#PWR07" H 5550 5600 50  0001 C CNN
+F 1 "GND" H 5555 5677 50  0000 C CNN
+F 2 "" H 5550 5850 50  0001 C CNN
+F 3 "" H 5550 5850 50  0001 C CNN
+	1    5550 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 5750 5550 5850
+$Comp
+L Connector_Generic:Conn_01x01 J3
+U 1 1 5F869528
+P 6500 5350
+F 0 "J3" H 6580 5392 50  0000 L CNN
+F 1 "HDMI pin 13" H 6580 5301 50  0000 L CNN
+F 2 "" H 6500 5350 50  0001 C CNN
+F 3 "~" H 6500 5350 50  0001 C CNN
+	1    6500 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 5350 6150 5350
+Wire Wire Line
+	6150 4750 6500 4750
+Wire Wire Line
+	6150 4850 6500 4850
+$Comp
+L power:GND #PWR08
+U 1 1 5F88137C
+P 6500 5000
+F 0 "#PWR08" H 6500 4750 50  0001 C CNN
+F 1 "GND" H 6505 4827 50  0000 C CNN
+F 2 "" H 6500 5000 50  0001 C CNN
+F 3 "" H 6500 5000 50  0001 C CNN
+	1    6500 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 5000 6500 4950
+$Comp
+L Connector_Generic:Conn_01x03 J4
+U 1 1 5F87EE9E
+P 6700 4850
+F 0 "J4" H 6780 4892 50  0000 L CNN
+F 1 "UART" H 6780 4801 50  0000 L CNN
+F 2 "" H 6700 4850 50  0001 C CNN
+F 3 "~" H 6700 4850 50  0001 C CNN
+	1    6700 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J5
+U 1 1 5F882456
+P 4200 5150
+F 0 "J5" H 4250 5467 50  0000 C CNN
+F 1 "ISP" H 4250 5376 50  0000 C CNN
+F 2 "" H 4200 5150 50  0001 C CNN
+F 3 "~" H 4200 5150 50  0001 C CNN
+	1    4200 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 5F893B00
+P 4500 5300
+F 0 "#PWR010" H 4500 5050 50  0001 C CNN
+F 1 "GND" H 4505 5127 50  0000 C CNN
+F 2 "" H 4500 5300 50  0001 C CNN
+F 3 "" H 4500 5300 50  0001 C CNN
+	1    4500 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 5250 4500 5300
+$Comp
+L power:+5V #PWR09
+U 1 1 5F895B0C
+P 4600 5050
+F 0 "#PWR09" H 4600 4900 50  0001 C CNN
+F 1 "+5V" V 4615 5178 50  0000 L CNN
+F 2 "" H 4600 5050 50  0001 C CNN
+F 3 "" H 4600 5050 50  0001 C CNN
+	1    4600 5050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4500 5050 4600 5050
+Wire Wire Line
+	4950 3850 4900 3850
+Wire Wire Line
+	6600 3950 6600 3650
+$Comp
+L power:+5V #PWR02
+U 1 1 5F875157
+P 6800 2650
+F 0 "#PWR02" H 6800 2500 50  0001 C CNN
+F 1 "+5V" V 6815 2778 50  0000 L CNN
+F 2 "" H 6800 2650 50  0001 C CNN
+F 3 "" H 6800 2650 50  0001 C CNN
+	1    6800 2650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR04
+U 1 1 5F87613D
+P 6600 4050
+F 0 "#PWR04" H 6600 3900 50  0001 C CNN
+F 1 "+5V" V 6615 4178 50  0000 L CNN
+F 2 "" H 6600 4050 50  0001 C CNN
+F 3 "" H 6600 4050 50  0001 C CNN
+	1    6600 4050
+	0    -1   -1   0   
+$EndComp
+Connection ~ 7100 2650
+Wire Wire Line
+	7100 2650 6800 2650
+Wire Wire Line
+	7300 2650 7100 2650
+Wire Wire Line
+	7900 3850 7900 3750
+Wire Wire Line
+	7700 3850 7900 3850
+Wire Wire Line
+	7700 3650 7900 3650
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 5F8772A1
+P 8100 3650
+F 0 "J2" H 8180 3642 50  0000 L CNN
+F 1 "Motor" H 8180 3551 50  0000 L CNN
+F 2 "" H 8100 3650 50  0001 C CNN
+F 3 "~" H 8100 3650 50  0001 C CNN
+	1    8100 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 4050 6700 4050
+Connection ~ 7400 4550
+Wire Wire Line
+	7400 4550 7400 4650
+Wire Wire Line
+	7300 4550 7400 4550
+Connection ~ 7300 4550
+Wire Wire Line
+	7300 4450 7300 4550
+Connection ~ 7100 4550
+Wire Wire Line
+	7400 4550 7400 4450
+Wire Wire Line
+	7100 4550 7300 4550
+Wire Wire Line
+	7100 4550 7100 4450
+Wire Wire Line
+	7000 4550 7100 4550
+Wire Wire Line
+	7000 4450 7000 4550
+Wire Wire Line
+	6600 3650 6700 3650
+$Comp
+L Driver_Motor:L293 U1
+U 1 1 5F86A5C2
+P 7200 3650
+F 0 "U1" H 7200 4831 50  0000 C CNN
+F 1 "L293DNE" H 7200 4740 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 7450 2900 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/l293.pdf" H 6900 4350 50  0001 C CNN
+	1    7200 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5F874C7F
+P 7400 4650
+F 0 "#PWR06" H 7400 4400 50  0001 C CNN
+F 1 "GND" H 7405 4477 50  0000 C CNN
+F 2 "" H 7400 4650 50  0001 C CNN
+F 3 "" H 7400 4650 50  0001 C CNN
+	1    7400 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 3850 6700 3850
+Wire Wire Line
+	6150 3950 6600 3950
+Text Label 4900 3850 2    50   ~ 0
+RESET
+Text Label 4000 5250 2    50   ~ 0
+RESET
+Text Label 4000 5050 2    50   ~ 0
+MISO
+Text Label 6150 4550 0    50   ~ 0
+MISO
+Text Label 4000 5150 2    50   ~ 0
+SCK
+Text Label 6150 4450 0    50   ~ 0
+SCK
+Text Label 4500 5150 0    50   ~ 0
+MOSI
+Text Label 6150 4350 0    50   ~ 0
+MOSI
+$Comp
+L power:+5V #PWR?
+U 1 1 5F8B061D
+P 5100 3550
+F 0 "#PWR?" H 5100 3400 50  0001 C CNN
+F 1 "+5V" V 5115 3678 50  0000 L CNN
+F 2 "" H 5100 3550 50  0001 C CNN
+F 3 "" H 5100 3550 50  0001 C CNN
+	1    5100 3550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5100 3550 5550 3550
+$EndSCHEMATC

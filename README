@@ -1,0 +1,11 @@
+Code for an ATTINY4313 to operate a motorized volume potentiometer in response
+to HDMI CEC volume commands sent from a TV.  It might be useful as a reference
+for someone implementing the CEC protocol on an AVR.
+
+This was part of a project to add remote volume control to a Pioneer SX-950
+receiver.  The project is described in more detail at
+https://blog.ldtlb.com/2020/10/14/pioneer-sx950-hdmi-cec-volume.html
+
+See schematic.svg for the hardware configuration.
+
+It has only been tested with an LG OLED65B6P.
