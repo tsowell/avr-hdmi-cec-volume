@@ -362,11 +362,11 @@ Text Label 4000 5250 2    50   ~ 0
 RESET
 Text Label 4000 5050 2    50   ~ 0
 MISO
-Text Label 6150 4550 0    50   ~ 0
+Text Label 6150 4450 0    50   ~ 0
 MISO
 Text Label 4000 5150 2    50   ~ 0
 SCK
-Text Label 6150 4450 0    50   ~ 0
+Text Label 6150 4550 0    50   ~ 0
 SCK
 Text Label 4500 5150 0    50   ~ 0
 MOSI
