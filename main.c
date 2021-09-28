@@ -399,6 +399,18 @@ set_system_audio_mode(uint8_t initiator, uint8_t destination, uint8_t system_aud
 }
 
 static void
+system_audio_mode_status(uint8_t initiator, uint8_t destination, uint8_t system_audio_mode_status)
+{
+	uint8_t pld[3];
+
+	pld[0] = (initiator << 4) | destination;
+	pld[1] = 0x7e;
+	pld[2] = system_audio_mode_status;
+
+	send_frame(3, pld);
+}
+
+static void
 set_osd_name(uint8_t initiator, uint8_t destination)
 {
 	uint8_t pld[15] = {
@@ -539,6 +551,14 @@ main(void)
 #endif /* DEBUG */
 					_delay_ms(13);
 					set_system_audio_mode(ADDRESS, 0x0f, 1);
+					break;
+				case 0x7d:
+#ifdef DEBUG
+					/* Give System Audio Mode Status */
+					printf_P(PSTR("<sys audio status>\n"));
+#endif /* DEBUG */
+					_delay_ms(13);
+					system_audio_mode_status(ADDRESS, 0x0f, 1);
 					break;
 				case 0x44:
 					if (pld[2] == 0x41) {
