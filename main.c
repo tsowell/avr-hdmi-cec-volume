@@ -411,15 +411,15 @@ set_osd_name(uint8_t initiator, uint8_t destination)
 }
 
 static void
-report_physical_address(uint8_t initiator, uint8_t destination, uint32_t physical_address)
+report_physical_address(uint8_t initiator, uint8_t destination, uint16_t physical_address, uint8_t device_type)
 {
 	uint8_t pld[5];
 
 	pld[0] = (initiator << 4) | destination;
-	pld[1] = 0x87;
-	pld[2] = (physical_address >> 16) & 0x0ff;
-	pld[3] = (physical_address >> 8) & 0x0ff;
-	pld[4] = (physical_address >> 0) & 0x0ff;
+	pld[1] = 0x84;
+	pld[2] = (physical_address >> 8) & 0x0ff;
+	pld[3] = (physical_address >> 0) & 0x0ff;
+	pld[4] = device_type;
 
 	send_frame(5, pld);
 }
@@ -530,7 +530,7 @@ main(void)
 					printf_P(PSTR("<phys address>\n"));
 #endif /* DEBUG */
 					_delay_ms(13);
-					report_physical_address(ADDRESS, 0x0f, 0x000005);
+					report_physical_address(ADDRESS, 0x0f, 0x0005, 0x05);
 					break;
 				case 0x70:
 #ifdef DEBUG
